@@ -3,7 +3,8 @@
 </template>
 
 <script setup lang="ts">
-const { chat, messages, sendMessage } = useChat();
+const route = useRoute();
+const { chat, messages, sendMessage } = useChat(String(route.params.id));
 
 const typing = ref(false);
 
